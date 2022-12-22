@@ -1,0 +1,27 @@
+1)Xavier/Glorat initialization
+      i)Normal Version(Use normal distribution)
+      ii)Uniform Version
+2)He initialization
+      i)Normal Version(Use normal distribution)
+      ii)Uniform Version
+
+tanh,sigmoid=>use xavier initialization
+relu=>He initialization
+
+Through experiments formulas has been derived and we will implement them in keras.
+
+Why do the formula works?
+=>The varience of our initialzed weights should not be too small or too large.
+  We cant multiply by any constatnt value-c
+                                          np.random.rand(250,250)*c
+  With what we will multiply will depend upon the architecture of the model.
+  Let a node is in a layer whose previous layer has 250 nodes.so the weights in that layer will be initialised such that their varience is (1/250).
+  c=(1/250)^1/2
+  This is xavier initialization
+  xavier initialization(normal)=(1/fan_in)^1/2           ........    fan_in=number of inputs coming to a node
+  
+  
+  let the architecture is like-two i/p and two nodes giving o/p.so in b/w the i/p and hidden nodes there are 4 connections,so weight initialization code is:-
+                                                                                                               np.random.randn(2,2)*((1/2)^1/2)
+                                                                                                               
+                                                                                                               
