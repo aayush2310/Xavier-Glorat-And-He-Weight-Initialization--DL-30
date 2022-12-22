@@ -25,3 +25,9 @@ Why do the formula works?
                                                                                                                np.random.randn(2,2)*((1/2)^1/2)
                                                                                                                
                                                                                                                
+He initialization(normal)
+       a little change-(2/fan_in)^1/2      instead of   (1/fan_in)^1/2
+       
+       
+Uniform distribution:-
+see pic
